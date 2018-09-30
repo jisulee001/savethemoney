@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>떼인돈 받아드립니다.</title>
+	<meta charset ="utf-8">
+<style>
+body{height:100vh; background-color:rgb(33,30,81); padding:20px;}
+	/*background-image : linear-gradient(rgb(33,30,81),rgb(216,0,0)); }*/
+#div{width:100%; height:100vh; text-align:center; background:url('cash.png'); 
+	background-position:cover;
+	}
+#div2{padding:20px; width:960px; margin:auto;}
+#title{width:800px; height:300px;  margin:auto; margin-top:100px;
+		text-align:center; font-size:4em; line-height:200px;
+		background:url("title.png"); }
+#ma{width:300px; height:600px; background-color:red; background: url('마동석_line.png'); background-repeat: no-repeat; float:left; background-position:center;}
+	#maP{margin-top:62px; 
+	animation: maA 2s cubic-bezier(.7,.25,1,.72) backwards;
+	animation-play-state:paused;}
+	#maP:hover{cursor:pointer;}
+#jang{width:300px; height:600px; background-color:red; display:inline-block; 
+	 background:url('장첸_line.png'); background-repeat: no-repeat; margin:0 auto;
+	background-position:center;}
+	#jangP{margin-top:115px; transform:scale(1.2); position:relative; left:5px;
+	animation: jangA 2s cubic-bezier(.7,.25,1,.72) backwards;	
+	animation-play-state:paused;}
+	#jangP:hover{cursor:pointer;}
+#je{width:300px; height:600px; background-color:red; float:right;
+	background:url('제시_line.png'); background-repeat: no-repeat;
+	background-position:center;
+	}
+	#jeP{transform:scale(0.5); position:relative; bottom:170px; right:80px;
+		animation: jeA 2s cubic-bezier(.7,.25,1,.72) backwards;	
+		animation-play-state:paused;}
+	#jeP:hover{cursor:pointer;}
+@keyframes maA {
+	 0% {transform:scale(1) rotate(0deg); position:relative; right:0px; bottom:0px; }
+	 50% {transform:scale(0.7) rotate(80deg); position:relative; right:150px; bottom:400px;}
+	 100%{transform:scale(0) rotate(360deg); position:relative; right:350px; bottom:700px;}
+}
+@keyframes jangA {
+	 0% {transform:scale(1.2) rotate(0deg); }
+	 50% {transform:scale(0.7) rotate(80deg); position:relative; right:600px; bottom:400px;}
+	 100%{transform:scale(0) rotate(360deg); position:relative; right:800px; bottom:700px;}
+
+}
+@keyframes jeA {
+	 0% {transform:scale(0.5) rotate(0deg);  }
+	 50% {transform:scale(0.3) rotate(80deg); position:relative; right:600px; bottom:400px;}
+	 100%{transform:scale(0) rotate(360deg); position:relative; right:1200px; bottom:800px;}
+
+}
+</style>
+</head>
+<body>
+<div id = "div">
+	<div id = "cart" style="width:100px;height:100px; background:url('cart.png'); background-size:80%;
+		background-repeat: no-repeat; background-position:center;">
+	</div>
+	<div id = title>
+		<img src = "title.png" id="titleI">
+	</div>
+	<div id = "div2">
+	<div id = "ma">
+		<img src = "마동석_투명배경_Medium.png" id = "maP">
+		<div style = "color:rgb(216,0,0); width:200px; text-align:center;
+						margin:auto; font-size:1.2em; padding:10px;">
+			<b style= "background-color:rgb(33,30,81)";>마동석</b>
+			<b style= "background-color:rgb(33,30,81)";>$150,000,000,000</b>
+		</div>
+		<audio id = "maAU">
+			<source src = "maAU.mp3" type="audio/mpeg">
+		</audio>
+	</div>
+	<div id = "jang">
+		<img src = "장첸_투명배경_Medium.png" id = "jangP">
+		<div style = " color:rgb(216,0,0); width:200px; text-align:center;
+						margin:auto; font-size:1.2em; padding:10px; position:relative; top:50px">
+			<b style= "background-color:rgb(33,30,81)">장첸</b>
+			<b style ="background:rgb(33,30,81);">$230,000,000,000</b>
+		</div>
+		<audio id = "jangAU">
+			<source src ="jangAU.mp3" type = "audio/mpeg">
+		</audio>
+	</div>
+	<div id = "je">
+		<img src = "제시_투명배경_Medium.png" id = "jeP">
+		<div style = "color:rgb(216,0,0); width:200px; text-align:center;
+						margin:auto; font-size:1.2em; padding:10px; position:relative; bottom:380px;">
+			<b style= "background-color:rgb(33,30,81)";> 제시</b>
+			<b style= "background-color:rgb(33,30,81)";>$150,000,000,000</b>
+		<audio id = "jeAU">
+			<source src="jeAU.mp3" type="audio/mpeg">
+		</audio>
+	</div>
+	</div>
+
+</div>
+<script type="text/javascript">
+	maP.onclick = function(){
+		maP.style.animationPlayState = "running";
+		titleI.style.backgroundColor = "black";
+		titleI.style.backgroundDisplay = "none";
+		titleI.setAttribute("src","maVV.gif");
+		maAU.play();
+
+	}
+	jangP.onclick = function(){
+		jangP.style.animationPlayState = "running";
+		titleI.setAttribute("src","jangVV.gif");
+		jangAU.play();
+	}
+	jeP.onclick=function(){
+		jeP.style.animationPlayState = "running";
+		titleI.setAttribute("src","jeVV.gif");
+		jeAU.play();
+	}
+
+</script>
+</body>
+</html>
